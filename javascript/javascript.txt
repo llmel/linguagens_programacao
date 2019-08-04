@@ -1,0 +1,229 @@
+Javascript é caso sensitivo sim.
+Ponto e vírgula é opcional.
+
+Receber dado no console e mostrar:
+	
+	const input = readLine();
+	console.log(input);
+
+Variáveis sempre devem começar com:
+	
+	letras ; underline / underscore ( _ ) ; sinal de dólar ($) ;
+
+NaN : Not-a-Number
+
+Adicionar um "+" em uma variável do tipo string transforma ela em número:
+EX. 1 + (+varTypeString).
+
+Importante: O "return" de uma função pode retornar até mesmo uma chamada de outra função.
+
+Podemos atribuir uma função (com ou sem nome) a uma variável. Se essa função
+possuir atributos, é só chamar a variável como função e passar o atributo
+desejado. Essa variável pode ser objeto também (JSON format).
+
+Math.PI - para obter o valor de pi em uma variável.
+
+Objetos iguais quando comparados retornam valor "false". Pois mesmo tendo
+conteúdo igual, fazem referência a duas partes distintas na memória.
+
+Operador para estritamente iguais:
+	"===" - não faz conversões automáticas. Só retorna true se o valor
+		e o tipo dos operandos forem iguais.
+	"!==" - não estritamente iguais.
+
+Valores falsos:
+	*false
+	*undefined
+	*null
+	*0
+	*Nan
+	*"" (string vazia)
+
+Comando switch (param){} :
+	Funciona como um if-else, só que mais simples.
+	É necessário sempre fazer um break dentro dos comandos 
+	de cada condição.
+
+Toda string tem a propriedade String.length.
+
+Quando queremos que uma aspa apareça no texto mostrado, é preciso colocar
+uma back slash antes das aspas.
+
+String(param) é a função para transformar algo em string. É como se fosse
+um parseInt,parseFloat.
+
+Loops Javascript:
+	- for
+	- while
+	- do-while
+	- for-in
+	- for-of
+
+Loop do-while:
+	a diferença para o while é que os comandos são executados pelo menos
+	uma vez, porque a condição só é checada após a execução dos comandos.
+	EX:
+		function main (input) {
+			var i = 1;
+			
+			do {
+
+				console.log(i);
+				i++;
+
+			} while (i <= input);
+		}
+
+Loops for-in & for-of:
+	Servem para percorrer objetos e arrays, respectivamente.
+	EX:
+		for (var indice in object) {
+			console.log(indice + " " + object[indice]);
+		}
+		
+		for (var indice of array) {
+                        console.log(indice + " " array[indice]);
+                }
+
+
+Dica: é uma boa prática para identificar erros de lógica, sempre mostrar no
+console.error() o resultado das operações de cada passo no nosso código, 
+pois fica mais fácil identificar os erros posteriormente.
+
+Combinações para tratamento de erro:
+	- Try-catch
+	- Try-finally
+	- Try-catch-finally
+
+	O catch só é executado quando tem erro ;
+	O finally sempre é executado, independente de ter ocorrido erro
+	ou não;
+
+O comando "throw" lança uma exceção, que é pega pelo catch. Throw funciona
+como um return, encerra o bloco ali onde está.
+
+
+Objetos:
+
+	Um objeto é um conjunto de propriedades.
+	Propriedade é uma associação entre um nome e um valor.
+		OBS: quando um valor associado a um nome é um função, essa
+		propriedade ganha o nome de "método".
+	OBS: dá pra chamar propriedades de objetos tanto usando o ponto,
+	(exemplo: objeto.propriedade) quanto tratar o objeto como vetor,
+	(exemplo: objeto['propriedade']).
+	
+	Podemos instanciar objetos de 3 formas:
+		- Através das chaves "{}";
+		- Através função Object(), com o operador "new" na frente;
+		- Através da função Object.create(param), sendo param um
+		objeto já iniciado.
+
+	Podemos também criar uma função construtora e depois chamá-la
+	com o operador "new" para instanciar um novo objeto:
+		- function ator (nome) {
+			this.nome = nome;
+			}
+
+	OBS: camelCase - palavras juntas sem pontuação, cada nova palavra inicia com letra maiúscula.
+
+
+
+Classes:
+	OBS: drawback - desvantagem
+	
+	Toda função em javascript tem algo chamado propriedade do protótipo,
+	que é vazia por padrão. Quando adicionamos métodos e propriedades ao
+	protótipo, eles ficam acessíveis para todas instâncias da função.
+	
+	A diferença entre simular classes via função e classes em si é que 
+	funções podem ser referenciadas antes de serem declaradas, ao 
+	contrário das classes, que não podem.
+
+	Classe diferente de objeto: classe é o modelo, objeto é algo criado
+	a partir do modelo.
+
+	Definição de classe dentro de variável é chamada de expressão de
+	classe. A classe pode ter nome ou não.
+
+	Métodos protótipos são métodos dentro da classe além do método 
+	construtor.
+
+	Métodos estáticos independem da classe ter um objeto instanciado ou
+	não. Eles não podem ser chamados por objetos, só diretamente pelo
+	nome da classe.
+
+	Podemos importar métodos e objetos através da keyword 'super'.
+
+	Subclasses são criadas com a keyword 'extends'.
+
+
+Modelos literais:
+	- São funções com apenas 2 parâmetros: strings e values.
+	- Estes parâmetros são tratados como arrays dentro da função.
+	- Na hora de chamar a função, não utilizamos parênteses "()", mas
+	sim a crase (``), ou seja, interpolação.
+	- Cada string passada será a string[x] da função. A mesma coisa com
+	valores.
+
+Funções de flecha:
+	- São abreviações de funções. É sempre uma função anônima.
+	- Uma função de flecha não precisa preceder a declaração "function".
+	- Quando a função só tem um comando, não precisa colocar o return,
+	pois ela retorna automaticamente.
+	- Quando tem apenas um parâmetro, não precisa colocar em parênteses.
+
+Utilizar "for in" para percorrer vetores é uma péssima ideia, pois pode causar
+vários problemas.
+
+Expressões regulares são objetos. 
+
+Olhei no fórum: 
+	- Inheritance
+	- Bitwise Operator
+	- Regular Expression 1
+	- Regular Expression 2
+	- Regular Expression 3
+
+Expressões Regulares:
+	- Elas possuem 2 métodos: exec() e test();
+	- Método exec retorna detalhes da expressão regular.
+	- Método test retorna true ou false.
+	- A barra invertida (backslash) é um caractere de escape para carac-
+	teres especiais, ela transforma eles em literais.
+		EX: var re = /\(11\) 95854-8125/
+	- Os caracteres "^" e "$" são indicadores de "inicia com" e 
+	"termina com".
+		EX: var re = /^\(11\) 95854-8125$/ - Qualquer string que
+		tenha algo além disso retornará false.
+	- O colchete "[]" determina um grupo/conjunto.
+	- O hífen "-" não é caractere especial. Ele indica range.
+	- A chave "{}" determina um quantificador.
+		EX: {n} - valor exato.
+		    {n,} - valor mínimo.
+		    {n,m} - valor mínimo e máximo.
+	- Quantificadores padrão:
+		- ? - zero ou um
+		- * - zero ou mais
+		- + - um ou mais
+	- Metacaracteres:
+		- . = representa qualquer caractere
+		- \w = representa o conjunto [a-zA-Z0-9_]
+		- \W = representa a negação do conjunto acima
+		- \d = representa o conjunto [0-9]
+		- \D = representa a negação do conjunto acima
+		- \s = representa um espaço em branco
+		- \S = representa a negação da expressão acima
+		- \n = representa uma quebra de linha
+		- \t = representa um tab
+	- Alguns métodos de string se aplicam a expressões regulares:
+		- Match - Retorna array contendo dados encontrados ou null.
+		- Split
+		- Replace
+		- Etc
+	- Modificadores:
+		- i - case-insensitive matching - Não vai diferir letras
+		- g - global matching - Não vai parar no primeiro match
+		- m - multiline matching - Vai continuar se tiver mais linhas
+
+
