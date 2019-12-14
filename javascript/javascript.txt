@@ -114,7 +114,7 @@ Objetos:
 	(exemplo: objeto['propriedade']).
 	
 	Podemos instanciar objetos de 3 formas:
-		- Através das chaves "{}";
+	- Através das chaves "{}";
 		- Através função Object(), com o operador "new" na frente;
 		- Através da função Object.create(param), sendo param um
 		objeto já iniciado.

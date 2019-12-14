@@ -1,0 +1,6 @@
+Sempre utilizar icones do FA, que é o Font Awesome. 
+
+Trocar cor de ícone - alterar a propriedade color do atributo style da tag <i>.
+	Ex: <i class="fa fa-bell" style="color:white"></i>
+
+
