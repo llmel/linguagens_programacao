@@ -1,0 +1,5 @@
+Instalação do spring roo:
+	Erro "unable to resolve [...], missing requirements [...]":
+	- Foi resolvido colocando o arquivo felix.jar, que vem dentro da pasta bin do apache felix, dentro da pasta bin do spring roo.
+
+
